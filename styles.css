@@ -82,7 +82,7 @@ body {
     gap: 40px;
 }
 
-.desafio__dia2 {
+.desafio__dia1, .desafio__dia2  {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -100,10 +100,24 @@ body {
     font-size: 1.3em;
 }
 
+.desafio__dia1__resposta{
+    text-align: left;
+    margin: 40px;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
 span {
     font-family: var(--font-principal);
     font-weight: 600;
     font-size: 1.5em;
+    color: var(--cor-principal);
+}
+
+.span__dia1{
+    font-family: var(--font-principal);
+    font-weight: 200;
+    font-size: 1em;
     color: var(--cor-principal);
 }
 
@@ -118,7 +132,7 @@ hr {
     width: 100%;
 }
 
-.desafio__dia2__codigo {
+.desafio__dia2__codigo, .desafio__dia1__codigo {
     display: flex;
     flex-direction: column;
     font-size: 2em;
