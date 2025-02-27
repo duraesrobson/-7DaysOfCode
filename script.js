@@ -3,7 +3,7 @@ let nome;
 let idade;
 let linguagem;
 let gosta;
-
+const btnContainer1 = document.querySelector(".desafio__dia3__btn");
 
 document.getElementById("btnEnviar").onclick = function () {
     nome = document.getElementById("nome").value;
@@ -36,6 +36,19 @@ document.getElementById("btnGosta").onclick = function () {
 document.getElementById("btnReset").onclick = function () {
     location.reload();
 }
+
+btnContainer1.addEventListener ("click", function(event) {
+    // Verifica qual botão foi clicado
+    if (event.target.id === "btn__frontend") {
+        document.getElementById("perguntaFrontEnd").style.display = "block";
+    } else if (event.target.id === "btn__backend") {
+        document.getElementById("perguntaBackEnd").style.display = "block";
+    } else {
+        resposta.textContent = "Clique em um botão válido!";
+    }
+})
+
+
 
 
 

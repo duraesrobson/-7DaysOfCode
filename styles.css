@@ -179,13 +179,13 @@ hr {
     margin: 40px;
 }
 
-#btn__frontend:hover, #btn__backend:hover{
+#btn__frontend:hover, #btn__backend:hover, #btn__react:hover, #btn__vue:hover, #btn__csharp:hover, #btn__java:hover{
     background-color: #120134;
     transition: 0.2s;
     opacity: 1;
 }
 
-#btn__frontend, #btn__backend {
+#btn__frontend, #btn__backend, #btn__react, #btn__vue, #btn__csharp, #btn__java  {
     align-self: center;
     background-color: var(--cor-principal);
     color: var(--cor-clara);
