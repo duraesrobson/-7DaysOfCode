@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>#7DaysOfCode</title>
+</head>
+
+<header>
+    <div class="header">
+        <h1 class="titulo">#7DaysOfCode</h1>
+    </div>  
+</header>
+
+<body>
+
+    <section class="desafio__container">
+        <div class="desafio__dia2">
+            <h1 class="desafio__tema"> #Day2: <span>Input Text</span></h1>
+            <p class="desafio__descricao">Este desafio, consiste em criar um programa que faça três perguntas ao usuário: qual o nome, quantos anos ele tem e qual linguagem de programação está estudando. As respostas serão registradas e, ao final, o programa exibirá uma mensagem personalizada com essas informações.</p>
+        </div>
+
+        <hr>
+
+        <div class="desafio__dia2__codigo">
+            <label for="">Qual o seu nome?</label>
+            <input class="desafio__dia2__input" type="text" id="nome" placeholder="Digite seu nome"> <br>
+            <label for="">Quantos anos você tem?</label>
+            <input class="desafio__dia2__input" type="text" id="idade" placeholder="Digite sua idade"> <br>
+            <label for="">Qual linguagem de programação você está estudando?</label>
+            <input class="desafio__dia2__input" type="text" id="linguagem" placeholder="Digite a linguagem"> <br>
+            <button type="submit" id="btnEnviar">Responder</button>
+
+            <h2 id="desafio__dia2__resposta"></h2>
+        </div>
+
+        
+        <div class="desafio__dia2__codigo">
+            <div id="segunda__pergunta" style="display: none;">
+                <label for="gosta">Você gosta de estudar <span id="linguagem__span" class="segunda__pergunta__span"></span> ? Responda 1 para SIM ou 2 para NÃO.</label>
+                <br>
+                <input class="desafio__dia2__input" type="text" id="gosta"> <br>
+                <br>
+                <button type="submit" id="btnGosta">Responder</button>
+                <br>
+                <h2 id="segunda__pergunta__resposta"></h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
