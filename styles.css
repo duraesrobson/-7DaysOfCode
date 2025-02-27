@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-:root{
+:root {
     --cor-principal: #5300f9;
     --cor-secundaria: #1f1f23;
     --cor-clara: whitesmoke;
@@ -9,23 +9,23 @@
     --font-secundaria: "Outfit", serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(45deg,#18181b,#120134,#18181b);
+    background: linear-gradient(45deg, #18181b, #120134, #18181b);
     color: var(--cor-clara);
     font-family: var(--font-principal);
     font-weight: 100;
 }
 
-.header{
+.header {
     background-size: cover;
     background-image: url(assets/grid-fundo.png);
     height: 20em;
@@ -35,7 +35,7 @@ body{
     border-bottom: var(--cor-principal) solid 5px;
 }
 
-.titulo{
+.titulo {
     display: flex;
     margin: 70px 0 70px 0;
     padding: 20px;
@@ -44,10 +44,9 @@ body{
     font-family: var(--font-principal);
     font-weight: 900;
     color: var(--cor-principal);
-
 }
 
-.desafio__container{
+.desafio__container {
     align-self: center;
     width: 70%;
     display: flex;
@@ -61,10 +60,9 @@ body{
     align-items: center;
     text-align: center;
     gap: 40px;
-    
 }
 
-.desafio__dia2{
+.desafio__dia2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -72,73 +70,86 @@ body{
     font-weight: 300;
 }
 
-.desafio__tema{
+.desafio__tema {
     font-size: 2em;
-    font-weight:400;
+    font-weight: 400;
 }
 
-.desafio__descricao{
+.desafio__descricao {
     font-size: 1.3em;
 }
 
-span{
+span {
     font-family: var(--font-principal);
     font-weight: 600;
     font-size: 1.5em;
     color: var(--cor-principal);
 }
 
-.segunda__pergunta__span{
+.segunda__pergunta__span {
     font-family: var(--font-principal);
     font-weight: 600;
     font-size: 1em;
     color: var(--cor-principal);
 }
 
-hr{
+hr {
     width: 100%;
 }
 
-.desafio__dia2__codigo{
+.desafio__dia2__codigo {
     display: flex;
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: var(--font-secundaria);
     font-weight: 500;
 }
 
-.desafio__dia2__input{
+.desafio__dia2__input {
     margin-top: 10px;
     align-self: center;
     justify-content: center;
     text-align: center;
-    width: auto;
-    height: 2.7em;
+    width: 40em;
+    height: 4em;
     border-radius: 20px;
 }
 
-#btnEnviar, #btnGosta{
+#btnEnviar,
+#btnGosta {
     align-self: center;
     background-color: var(--cor-principal);
     color: var(--cor-clara);
     border: none;
     border-radius: 30px;
     padding: 10px;
-    width: 130px;
+    width: 30%;
     font-size: 0.8em;
     font-family: var(--font-principal);
     font-weight: 500;
 }
 
-#desafio__dia2__resposta:not(:empty){
+#btnReset {
+    align-self: center;
+    color: var(--cor-principal);
+    border: var(--cor-principal) solid 2px;
+    border-radius: 30px;
+    padding: 2px;
+    width: 10%;
+    font-size: 1em;
+    font-family: var(--font-principal);
+}
+
+#desafio__dia2__resposta:not(:empty) {
     border: var(--cor-principal) solid 2px;
 }
 
-#segunda__pergunta__resposta:not(:empty){
+#segunda__pergunta__resposta:not(:empty) {
     border: var(--cor-principal) solid 2px;
 }
 
-#desafio__dia2__resposta, #segunda__pergunta__resposta{
+#desafio__dia2__resposta,
+#segunda__pergunta__resposta {
     padding: 10px;
     border-radius: 10px;
     margin-top: 50px;
@@ -147,10 +158,3 @@ hr{
     font-weight: 600;
     color: var(--cor-principal);
 }
-
-
-
-
-
-
-
