@@ -66,8 +66,16 @@ body {
     color: var(--cor-principal);
 }
 
+.main__content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .desafio__container {
-    align-self: center;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -96,7 +104,8 @@ body {
 }
 
 .desafio__descricao {
-    text-align: center;
+    margin-top: 20px;
+    text-align: left;
     font-size: 1.3em;
 }
 
@@ -151,7 +160,7 @@ hr {
 }
 
 #btnEnviar,
-#btnGosta {
+#btnGosta{
     align-self: center;
     background-color: var(--cor-principal);
     color: var(--cor-clara);
@@ -163,6 +172,33 @@ hr {
     font-family: var(--font-principal);
     font-weight: 500;
 }
+
+.desafio__dia3__btn{
+    display: flex;
+    gap: 30px;
+    margin: 40px;
+}
+
+#btn__frontend:hover, #btn__backend:hover{
+    background-color: #120134;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+#btn__frontend, #btn__backend {
+    align-self: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    width: 60%;
+    font-size: 0.8em;
+    font-family: var(--font-principal);
+    font-weight: 500;
+    cursor: pointer;
+}
+
 
 #btnReset {
     align-self: center;

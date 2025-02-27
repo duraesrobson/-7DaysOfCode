@@ -19,6 +19,8 @@
 
 <body>
 
+<main class="main__content">
+
     <section class="desafio__container">
         <div class="desafio__dia1">
             <h1 class="desafio__tema"> #Day1: <span>Operações Booleanas</span></h1>
@@ -87,7 +89,7 @@
 
     <section class="desafio__container">
         <div class="desafio__dia">
-            <h1 class="desafio__tema"> #Day2: <span>Input Text</span></h1>
+            <h1 class="desafio__tema"> #Day2: <span>Variáveis</span></h1>
             <p class="desafio__descricao">Este desafio, consiste em criar um programa que faça três perguntas ao
                 usuário: qual o nome, quantos anos ele tem e qual linguagem de programação está estudando. As respostas
                 serão registradas e, ao final, o programa exibirá uma mensagem personalizada com essas informações.</p>
@@ -125,7 +127,44 @@
 
     </section>
 
+    <section class="desafio__container">
+        <div class="desafio__dia">
+            <h1 class="desafio__tema"> #Day3: <span>Fluxo de decisão</span></h1>
+            <p class="desafio__descricao">O desafio é criar um jogo onde o usuário decide seu caminho na programação: <br> <br>
+
+                <span class="span__dia1">1. </span>Primeiro, ele escolhe se quer seguir para Front-End ou Back-End. <br> 
+                <span class="span__dia1">2. </span>No Front-End, pode optar por aprender React ou Vue. No Back-End, as opções são C# ou Java. <br> 
+                <span class="span__dia1">3. </span>Depois, ele decide se quer se especializar na área escolhida ou se tornar um desenvolvedor Fullstack, com uma mensagem específica para cada escolha. <br> 
+                <span class="span__dia1">4. </span>Por último, ele pode dizer quais tecnologias quer aprender. Ele pode adicionar quantas quiser, uma por vez, enquanto continuar respondendo "ok" para a pergunta "Tem mais alguma tecnologia que você gostaria de aprender?". Cada tecnologia escolhida recebe um comentário especial.</p>
+        </div>
+
+        <hr>
+
+        <div class="desafio__dia2__codigo">
+            <label for="">Qual área você quer seguir?</label>
+            <div class="desafio__dia3__btn">
+                <button type="submit" id="btn__frontend">Front-End</button>
+                <button type="submit" id="btn__backend">Back-End</button>
+            </div>
+            <h2 id="desafio__dia2__resposta"></h2>
+        </div>
+
+        <div class="desafio__dia2__codigo">
+            <div id="segunda__pergunta" style="display: none;">
+                <label for="gosta">Você gosta de estudar <span id="linguagem__span"
+                        class="segunda__pergunta__span"></span> ?<br> Responda 1 para SIM ou 2 para NÃO.</label>
+                <br>
+                <input class="desafio__dia2__input" type="number" min="1" max="2" id="gosta" required> <br>
+                <br>
+                <button type="submit" id="btnGosta">Responder</button>
+                <br>
+                <h2 id="segunda__pergunta__resposta"></h2>
+            </div>
+        </div>
+
     <script src="script.js"></script>
+
+</main>
 </body>
 
 <footer>
