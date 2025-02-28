@@ -105,7 +105,7 @@
             <label for="">Qual linguagem de programação você está estudando?</label>
             <input class="desafio__dia2__input" type="text" id="linguagem" placeholder="Digite a linguagem" required>
             <br>
-            <button type="submit" id="btnEnviar">Responder</button>
+            <button type="submit" id="btnResponder">Responder</button>
 
             <h2 id="desafio__dia2__resposta"></h2>
         </div>
@@ -140,34 +140,59 @@
 
         <hr>
 
-        <div class="desafio__dia2__codigo">
+        <div class="desafio__dia3__codigo">
             <label for="">Qual área você quer seguir?</label>
-            <div class="desafio__dia3__btn">
+            <div class="desafio__dia3__btn__area">
                 <button type="submit" id="btn__frontend">Front-End</button>
                 <button type="submit" id="btn__backend">Back-End</button>
             </div>
-            <h2 id="desafio__dia2__resposta"></h2>
         </div>
 
-        <div class="desafio__dia2__codigo">
+        <div class="desafio__dia3__codigo">
             <div id="perguntaFrontEnd" style="display: none;">
             <label for="">O que deseja aprender?</label>
-            <div class="desafio__dia3__btn">
+            <div class="desafio__dia3__btn__frontend">
                 <button type="submit" id="btn__react">React</button>
                 <button type="submit" id="btn__vue">Vue</button>
             </div>
             </div>
         </div>
 
-        <div class="desafio__dia2__codigo">
+        <div class="desafio__dia3__codigo">
             <div id="perguntaBackEnd" style="display: none;">
             <label for="">O que deseja aprender?</label>
-            <div class="desafio__dia3__btn">
+            <div class="desafio__dia3__btn__backend">
                 <button type="submit" id="btn__csharp">C#</button>
                 <button type="submit" id="btn__java">Java</button>
             </div>
         </div>
         </div>
+
+        <div class="desafio__dia3__codigo">
+            <div id="perguntaComoSeguir" style="display: none;">
+            <label for="">Como deseja continuar?</label>
+            <div class="desafio__dia3__btn__sequencia">
+                <button type="submit" id="btn__especializar">Seguir se especializando em <p id="especializarPergunta"></p></button>
+                <button type="submit" id="btn__fullstack">Quero ser Fullstack
+                </button>
+            </div>
+            
+        </div>
+        <p id="sequencia__descricao"></p>
+        </div>
+
+        <div class="desafio__dia3__codigo">
+            <div id="perguntaLoop" style="display: none;">
+            <label for="">Tem mais alguma tecnologia que você gostaria de se especializar?</label>
+            <br>
+            <button type="submit" id="btnEnviar">Enviar</button>
+            
+        </div>
+        <p id="sequencia__descricao2" style="display: none;" >Tecnologias listadas:</p>
+        <ul id="listaTecnologias" class="lista__tecnologias" aria-live="polite" role="list"></ul>
+    </div>
+
+        
 
 
     <script src="script.js"></script>
