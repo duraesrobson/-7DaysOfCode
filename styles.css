@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --cor-principal: #5300f9;
+    --cor-principal: rgb(55, 1, 231);
     --cor-secundaria: #1f1f23;
-    --cor-clara: whitesmoke;
+    --cor-clara: #F9E8C9;
     --font-principal: "Funnel Display";
     --font-secundaria: "Outfit", serif;
 }
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     background-size: cover;
-    background-image: url(assets/grid-fundo.png);
+    background-image: url(assets/grid3.png);
     height: 34em;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@ body {
     gap: 40px;
 }
 
-.desafio__dia1, .desafio__dia2  {
+.desafio__dia1, .desafio__dia2, .desafio__dia3  {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -101,6 +101,7 @@ body {
 .desafio__tema {
     font-size: 2em;
     font-weight: 400;
+    margin: 20px;
 }
 
 .desafio__descricao {
