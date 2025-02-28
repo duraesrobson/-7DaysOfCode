@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --cor-principal: rgb(55, 1, 231);
-    --cor-secundaria: #1f1f23;
+    --cor-principal: #145bd5;
+    --cor-secundaria: #161618;
+    --cor-media: #8baeea;
     --cor-clara: #F9E8C9;
     --font-principal: "Funnel Display";
     --font-secundaria: "Outfit", serif;
@@ -19,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(45deg, #18181b, #120134, #18181b);
+    background: linear-gradient(45deg, #18181b, #081d42, #18181b);
     color: var(--cor-clara);
     font-family: var(--font-principal);
     font-weight: 100;
