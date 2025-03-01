@@ -5,7 +5,7 @@
     --cor-principal: #145bd5;
     --cor-secundaria: #161618;
     --cor-media: #8baeea;
-    --cor-clara: #F9E8C9;
+    --cor-clara: #e8f0fb;
     --font-principal: "Funnel Display";
     --font-secundaria: "Outfit", serif;
 }
@@ -91,7 +91,7 @@ body {
     gap: 40px;
 }
 
-.desafio__dia1, .desafio__dia2, .desafio__dia3  {
+.desafio__dia1, .desafio__dia2, .desafio__dia3, .desafio__dia4  {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -143,7 +143,7 @@ hr {
     width: 100%;
 }
 
-.desafio__dia2__codigo, .desafio__dia1__codigo, .desafio__dia3__codigo {
+.desafio__dia2__codigo, .desafio__dia1__codigo, .desafio__dia3__codigo, .desafio__dia4__codigo {
     display: flex;
     flex-direction: column;
     font-size: 2em;
@@ -161,7 +161,7 @@ hr {
     border-radius: 20px;
 }
 
-#btnEnviar,
+#btnEnviar, #btnAdivinhar, 
 #btnGosta, #btnResponder{
     align-self: center;
     background-color: var(--cor-principal);
@@ -170,7 +170,7 @@ hr {
     border-radius: 30px;
     margin: 20px;
     padding: 10px;
-    width: 30%;
+    width: 60%;
     font-size: 0.8em;
     font-family: var(--font-principal);
     font-weight: 500;
@@ -185,7 +185,7 @@ hr {
 
 #btnEnviar:hover,
 #btnGosta:hover, #btnResponder:hover,#btn__frontend:hover, #btn__backend:hover, #btn__react:hover, #btn__vue:hover, #btn__csharp:hover, #btn__java:hover, #btn__especializar:hover, #btn__fullstack:hover{
-    background-color: #120134;
+    background-color: #0a2b60;
     transition: 0.2s;
     opacity: 1;
 }
@@ -205,14 +205,15 @@ hr {
 }
 
 
-#btnReset {
+#btnReset, #btnAdivinharReset {
     align-self: center;
     color: var(--cor-principal);
     border: var(--cor-principal) solid 2px;
     border-radius: 30px;
-    padding: 2px;
-    width: 10%;
-    font-size: 1em;
+    padding: 4px;
+    margin: 10px;
+    width: 30%;
+    font-size: 0.7em;
     font-family: var(--font-principal);
 }
 
@@ -250,4 +251,13 @@ hr {
     font-weight: 300;
     font-size: 0.8em;
     list-style: none;
+}
+
+#desafio__dia4__resposta{
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--font-principal);
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--cor-principal);
 }

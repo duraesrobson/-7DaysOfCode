@@ -7,7 +7,12 @@ let especialidade;
 let frontend = false;
 let backend = false;
 let tecnologias = [];
+let chute;
+let tentativas = 0;
+const numeroCerto = Math.floor(Math.random() *10+1);
 
+
+console.log(numeroCerto);
 
 document.getElementById("btnResponder").onclick = function () {
     nome = document.getElementById("nome").value;
@@ -136,6 +141,36 @@ function atualizarListaTecnologias() {
     listaTecnologias.innerHTML = tecnologias.map(input__tecnologia => `<li>${input__tecnologia}</li>`).join("");
 
 }
+
+
+document.getElementById("btnAdivinhar").onclick = function() {
+    chute = document.getElementById("chuteUsuario").value;
+    tentativas++;
+
+    if (chute == numeroCerto) {
+        document.getElementById("desafio__dia4__resposta").style.color = "#145bd5";
+        document.getElementById("desafio__dia4__resposta").textContent = "Parabéns, você acertou o número!";
+        document.getElementById("btnAdivinhar").disabled = true;
+        document.getElementById("btnAdivinharReset").style.display = "block";
+    } else if (tentativas < 3) {
+        document.getElementById("desafio__dia4__resposta").style.color = "red";
+        document.getElementById("desafio__dia4__resposta").textContent = "Tente novamente, você vai conseguir!";
+    } else {
+        document.getElementById("desafio__dia4__resposta").style.color = "red";
+        document.getElementById("desafio__dia4__resposta").textContent = `Poxa, não foi dessa vez. O número era ${numeroCerto}.`
+        document.getElementById("btnAdivinhar").disabled = true;
+        document.getElementById("btnAdivinharReset").style.display = "block";
+    }
+
+    document.getElementById("chuteUsuario").value = ""
+    document.getElementById("btnAdivinharReset").onclick = function () {
+    location.reload();
+
+    }
+
+}
+
+
 
 
 
