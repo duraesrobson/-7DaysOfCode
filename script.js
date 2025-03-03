@@ -10,6 +10,14 @@ let tecnologias = [];
 let chute;
 let tentativas = 0;
 const numeroCerto = Math.floor(Math.random() *10+1);
+let listasCategorias = {
+    frutas: [],
+    doces: [],
+    congelados: [],
+    laticinios: []
+}
+let itemCompra;
+
 
 
 console.log(numeroCerto);
@@ -170,7 +178,79 @@ document.getElementById("btnAdivinhar").onclick = function() {
 
 }
 
+document.querySelectorAll(".desafio__dia5__btn__area button").forEach(btn => {
+    btn.addEventListener("click", function (event) {
+        if (event.target.id === "btnSim") {
+            document.getElementById("dia5PrimeiraPergunta").style.display = "none";
+            document.getElementById("dia5SegundaPergunta").style.display = "block";
+            document.getElementById("lista__compras__container").style.display = "none"; 
+            document.getElementById("listaCompras").style.display = "none"; 
+            document.getElementById("btnAdicionarReset").style.display = "none"; 
+        } else if (event.target.id === "btnNao") {
+            
+            document.getElementById("lista__compras__container").style.display = "block";
+            document.getElementById("listaCompras").style.display = "block"; 
+            document.getElementById("item__adicionado").style.display = "none";
+            document.getElementById("btnAdicionarReset").style.display = "block";
+        }
+    });
+});
+
+document.getElementById("btn__adicionar").onclick = function() {
+    let itemCompra = document.getElementById("item__usuario").value;
+    document.getElementById("dia5SegundaPergunta").style.display = "none";
+    document.getElementById("perguntaCategoria").style.display = "block";
+    document.getElementById("labelPerguntaCategoria").textContent = `Qual a categoria do item (${itemCompra}) ?`
+
+    document.querySelectorAll(".desafio__dia5__btn__categorias button").forEach(btn => {
+        btn.onclick = function () {
+            let categoria = btn.id;
+            if (categoria === "btnFrutas") {
+                listasCategorias["frutas"].push(itemCompra);
+            } else if (categoria === "btnDoces") {
+                listasCategorias["doces"].push(itemCompra);
+            } else if (categoria === "btnCongelados") {
+                listasCategorias["congelados"].push(itemCompra);
+            } else {
+                listasCategorias["laticinios"].push(itemCompra);
+            }
+
+            document.getElementById("perguntaCategoria").style.display = "none";
+            document.getElementById("dia5PrimeiraPergunta").style.display = "block";
+            document.getElementById("item__adicionado").textContent = `O item ${itemCompra} foi adicionado a lista de compras.`
+            
+            atualizarLista();
+        };
+        
+    });
+};
+
+function atualizarLista() {
+    let listaHTML = `
+        <li><strong>Congelados:</strong><span class="item__da__lista"> ${listasCategorias.congelados.join(", ") || "Nenhum"}</span></li>
+        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategorias.doces.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Frutas:</strong><span class="item__da__lista"> ${listasCategorias.frutas.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategorias.laticinios.join(", ") || "Nenhum"}</span></li>
+    `;
+    document.getElementById("listaCompras").innerHTML = listaHTML;
+}
+
+document.getElementById("btnAdicionarReset").onclick = function () {
+    listasCategorias = {
+        frutas: [],
+        doces: [],
+        congelados: [],
+        laticinios: []
+    };
+    atualizarLista(); // Atualiza para lista vazia
+    document.getElementById("lista__compras__container").style.display = "none";
+    document.getElementById("listaCompras").style.display = "none";
+    document.getElementById("btnAdicionarReset").style.display = "none";
+};
 
 
+
+
+    
 
 

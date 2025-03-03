@@ -95,7 +95,8 @@ body {
 .desafio__dia1,
 .desafio__dia2,
 .desafio__dia3,
-.desafio__dia4 {
+.desafio__dia4, 
+.desafio__dia5 {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -150,7 +151,8 @@ hr {
 .desafio__dia2__codigo,
 .desafio__dia1__codigo,
 .desafio__dia3__codigo,
-.desafio__dia4__codigo {
+.desafio__dia4__codigo,
+.desafio__dia5__codigo {
     display: flex;
     flex-direction: column;
     font-size: 2em;
@@ -171,7 +173,9 @@ hr {
 #btnEnviar,
 #btnAdivinhar,
 #btnGosta,
-#btnResponder {
+#btnResponder,
+#btnSim,
+#btnNao {
     align-self: center;
     background-color: var(--cor-principal);
     color: var(--cor-clara);
@@ -187,11 +191,13 @@ hr {
 }
 
 .desafio__dia3__btn__area,
+.desafio__dia5__btn__area,
+.desafio__dia5__btn__categorias,
 .desafio__dia3__btn__frontend,
 .desafio__dia3__btn__backend,
 .desafio__dia3__btn__sequencia {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     margin: 40px;
 }
 
@@ -205,11 +211,12 @@ hr {
 #btn__csharp:hover,
 #btn__java:hover,
 #btn__especializar:hover,
-#btn__fullstack:hover {
+#btn__fullstack:hover{
     background-color: #0a2b60;
     transition: 0.2s;
     opacity: 1;
 }
+
 
 #btn__frontend,
 #btn__backend,
@@ -218,7 +225,8 @@ hr {
 #btn__csharp,
 #btn__java,
 #btn__especializar,
-#btn__fullstack {
+#btn__fullstack,
+#btn__adicionar {
     align-self: center;
     background-color: var(--cor-principal);
     color: var(--cor-clara);
@@ -232,9 +240,26 @@ hr {
     cursor: pointer;
 }
 
+.btn__default {
+    align-self: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    width: 60%;
+    font-size: 0.8em;
+    font-family: var(--font-principal);
+    font-weight: 500;
+    cursor: pointer;
+}
 
-#btnReset,
-#btnAdivinharReset {
+.btn__default:hover {
+    background-color: #0a2b60;
+    transition: 0.2s ease-in-out;
+}
+
+.btn__reset {
     align-self: center;
     color: var(--cor-principal);
     border: var(--cor-principal) solid 2px;
@@ -242,7 +267,8 @@ hr {
     padding: 4px;
     margin: 10px;
     width: 30%;
-    font-size: 0.7em;
+    height: 3em;
+    font-size: 0.9em;
     font-family: var(--font-principal);
 }
 
@@ -277,7 +303,8 @@ hr {
     gap: 30px;
 }
 
-.lista__tecnologias {
+.lista__tecnologias,
+.lista__compras {
     font-weight: 300;
     font-size: 0.8em;
     list-style: none;
@@ -290,6 +317,30 @@ hr {
     font-size: 1em;
     font-weight: 600;
     color: var(--cor-principal);
+}
+
+.lista__compras__titulo{
+    font-size: 2em;
+    color: var(--cor-principal);
+    font-family: var(--font-secundaria);
+    font-weight: 200;
+}
+
+.lista__compras__itens{
+    text-align: left;
+    font-size: 1.5em;
+    color: var(--cor-clara);
+    font-family: var(--font-secundaria);
+    font-weight: 200;
+}
+
+.item__da__lista{
+        text-align: left;
+        font-size: 1em;
+        color: var(--cor-principal);
+        font-family: var(--font-secundaria);
+        font-weight: 200;
+    
 }
 
 .footer {
@@ -396,12 +447,13 @@ hr {
         height: 4em;
         border-radius: 20px;
     }
-
+    .desafio__dia5__btn__area,
     .desafio__dia3__btn__area,
     .desafio__dia3__btn__frontend,
     .desafio__dia3__btn__backend,
     .desafio__dia3__btn__sequencia {
         display: flex;
+        flex-direction: column;
         gap: 15px;
         margin: 20px;
     }
