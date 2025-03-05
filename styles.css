@@ -170,26 +170,6 @@ hr {
     border-radius: 20px;
 }
 
-#btnEnviar,
-#btnAdivinhar,
-#btnGosta,
-#btnResponder,
-#btnSim,
-#btnNao {
-    align-self: center;
-    background-color: var(--cor-principal);
-    color: var(--cor-clara);
-    border: none;
-    border-radius: 30px;
-    margin: 20px;
-    padding: 10px;
-    width: 60%;
-    font-size: 0.8em;
-    font-family: var(--font-principal);
-    font-weight: 500;
-    cursor: pointer;
-}
-
 .desafio__dia3__btn__area,
 .desafio__dia5__btn__area,
 .desafio__dia5__btn__categorias,
@@ -199,45 +179,6 @@ hr {
     display: flex;
     gap: 25px;
     margin: 40px;
-}
-
-#btnEnviar:hover,
-#btnGosta:hover,
-#btnResponder:hover,
-#btn__frontend:hover,
-#btn__backend:hover,
-#btn__react:hover,
-#btn__vue:hover,
-#btn__csharp:hover,
-#btn__java:hover,
-#btn__especializar:hover,
-#btn__fullstack:hover{
-    background-color: #0a2b60;
-    transition: 0.2s;
-    opacity: 1;
-}
-
-
-#btn__frontend,
-#btn__backend,
-#btn__react,
-#btn__vue,
-#btn__csharp,
-#btn__java,
-#btn__especializar,
-#btn__fullstack,
-#btn__adicionar {
-    align-self: center;
-    background-color: var(--cor-principal);
-    color: var(--cor-clara);
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
-    width: 60%;
-    font-size: 0.8em;
-    font-family: var(--font-principal);
-    font-weight: 500;
-    cursor: pointer;
 }
 
 .btn__default {
@@ -270,6 +211,7 @@ hr {
     height: 3em;
     font-size: 0.9em;
     font-family: var(--font-principal);
+    cursor: pointer;
 }
 
 #desafio__dia2__resposta:not(:empty) {
@@ -311,10 +253,10 @@ hr {
 }
 
 #desafio__dia4__resposta {
-    padding: 10px;
+    margin-top: 40px;
     border-radius: 10px;
     font-family: var(--font-principal);
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: 600;
     color: var(--cor-principal);
 }
@@ -458,20 +400,12 @@ hr {
         margin: 20px;
     }
 
-    #btn__frontend,
-    #btn__backend,
-    #btn__react,
-    #btn__vue,
-    #btn__csharp,
-    #btn__java,
-    #btn__especializar,
-    #btn__fullstack {
+    .btn__default {
         width: 7em;
         font-size: 0.6em;
     }
 
-    #btnReset,
-    #btnAdivinharReset {
+    .btn__reset {
         width: 40%;
     }
 

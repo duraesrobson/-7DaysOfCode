@@ -1,4 +1,4 @@
-
+//Código do #Day2
 let nome;
 let idade;
 let linguagem;
@@ -6,21 +6,6 @@ let gosta;
 let especialidade;
 let frontend = false;
 let backend = false;
-let tecnologias = [];
-let chute;
-let tentativas = 0;
-const numeroCerto = Math.floor(Math.random() *10+1);
-let listasCategorias = {
-    frutas: [],
-    doces: [],
-    congelados: [],
-    laticinios: []
-}
-let itemCompra;
-
-
-
-console.log(numeroCerto);
 
 document.getElementById("btnResponder").onclick = function () {
     nome = document.getElementById("nome").value;
@@ -55,6 +40,8 @@ document.getElementById("btnReset").onclick = function () {
 }
 
 
+//Código do #Day3
+let tecnologias = [];
 
 document.querySelectorAll(".desafio__dia3__btn__area button").forEach(btn => {
     btn.addEventListener("click", function (event) {
@@ -150,6 +137,10 @@ function atualizarListaTecnologias() {
 
 }
 
+//Código do #Day4
+let chute;
+let tentativas = 0;
+const numeroCerto = Math.floor(Math.random() *10+1);
 
 document.getElementById("btnAdivinhar").onclick = function() {
     chute = document.getElementById("chuteUsuario").value;
@@ -177,6 +168,15 @@ document.getElementById("btnAdivinhar").onclick = function() {
     }
 
 }
+
+//Código do #Day5
+let listasCategorias = {
+    frutas: [],
+    doces: [],
+    congelados: [],
+    laticinios: []
+}
+let itemCompra;
 
 document.querySelectorAll(".desafio__dia5__btn__area button").forEach(btn => {
     btn.addEventListener("click", function (event) {
@@ -247,6 +247,8 @@ document.getElementById("btnAdicionarReset").onclick = function () {
     document.getElementById("listaCompras").style.display = "none";
     document.getElementById("btnAdicionarReset").style.display = "none";
 };
+
+//Código do #Day6
 
 
 
