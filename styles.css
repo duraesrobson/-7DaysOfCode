@@ -77,6 +77,10 @@ body {
     flex-direction: row;
 }
 
+label{
+    margin: 5px;
+}
+
 .desafio__container {
     width: 70%;
     display: flex;
@@ -99,7 +103,6 @@ body {
 .desafio__dia5 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-family: var(--font-secundaria);
     font-weight: 300;
 }
@@ -178,7 +181,7 @@ hr {
 .desafio__dia3__btn__sequencia {
     display: flex;
     gap: 25px;
-    margin: 40px;
+    margin-top: 20px;
 }
 
 .btn__default {
@@ -188,6 +191,7 @@ hr {
     border: none;
     border-radius: 30px;
     padding: 10px;
+    margin-top: 15px;
     width: 60%;
     font-size: 0.8em;
     font-family: var(--font-principal);
@@ -397,7 +401,6 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin: 20px;
     }
 
     .btn__default {
