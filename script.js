@@ -175,7 +175,7 @@ let listasCategorias = {
     doces: [],
     congelados: [],
     laticinios: []
-}
+};
 let itemCompra;
 
 document.querySelectorAll(".desafio__dia5__btn__area button").forEach(btn => {
@@ -197,6 +197,12 @@ document.querySelectorAll(".desafio__dia5__btn__area button").forEach(btn => {
 });
 
 document.getElementById("btn__adicionar").onclick = function() {
+
+    if (document.getElementById("item__usuario").value === "") {
+        alert("Digite um item válido!");
+        return;
+    }
+    
     let itemCompra = document.getElementById("item__usuario").value;
     document.getElementById("dia5SegundaPergunta").style.display = "none";
     document.getElementById("perguntaCategoria").style.display = "block";

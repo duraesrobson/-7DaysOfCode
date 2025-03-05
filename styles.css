@@ -280,6 +280,15 @@ hr {
     font-weight: 200;
 }
 
+.item__adicionado{
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--cor-principal);
+    font-family: var(--font-secundaria);
+    font-weight: 200;
+    margin-top: 15px;
+}
+
 .item__da__lista{
         text-align: left;
         font-size: 1em;
