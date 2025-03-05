@@ -39,7 +39,6 @@ document.getElementById("btnReset").onclick = function () {
     location.reload();
 }
 
-
 //Código do #Day3
 let tecnologias = [];
 
@@ -128,10 +127,10 @@ document.getElementById("btnEnviar").onclick = function() {
     }
 
 
-    atualizarListaTecnologias();
+    atualizarListaDia6Tecnologias();
 }
 
-function atualizarListaTecnologias() {
+function atualizarListaDia6Tecnologias() {
     let listaTecnologias = document.getElementById("listaTecnologias");
     listaTecnologias.innerHTML = tecnologias.map(input__tecnologia => `<li>${input__tecnologia}</li>`).join("");
 
@@ -254,11 +253,139 @@ document.getElementById("btnAdicionarReset").onclick = function () {
     document.getElementById("btnAdicionarReset").style.display = "none";
 };
 
+
 //Código do #Day6
+let listasCategoriasDia6 = {
+    frutas: [],
+    doces: [],
+    congelados: [],
+    laticinios: []
+};
+let itemCompraDia6;
 
+document.querySelectorAll(".desafio__dia6__btn__area button").forEach(btn => {
+    btn.addEventListener("click", function (event) {
+        if (event.target.id === "btnSimDia6") {
+            document.getElementById("dia6PrimeiraPergunta").style.display = "none";
+            document.getElementById("dia6SegundaPergunta").style.display = "block";
+            document.getElementById("lista__compras__container__dia6").style.display = "none"; 
+            document.getElementById("listaComprasDia6").style.display = "none"; 
+            document.getElementById("btnAdicionarResetDia6").style.display = "none";
+            
+        } else if (event.target.id === "btnNaoDia6") {
+            document.getElementById("lista__compras__container__dia6").style.display = "block";
+            document.getElementById("listaComprasDia6").style.display = "block"; 
+            document.getElementById("item__adicionado__dia6").style.display = "none";
+            document.getElementById("btnAdicionarResetDia6").style.display = "block";
+        }
+});
+});
 
+    document.getElementById("btnRemoverItem").onclick = function(){
+        
+    document.getElementById("dia6PerguntaRemover").style.display = "block";
+    document.getElementById("dia6PrimeiraPergunta").style.display = "none";
+    document.getElementById("lista__compras__container__dia6").style.display = "block";
+    document.getElementById("listaComprasDia6").style.display = "block"; 
+    document.getElementById("btnAdicionarResetDia6").style.display = "block";
+}
 
+//remover item
+document.getElementById("btnRemover").onclick = function() {
 
+    let itemRemovido = document.getElementById("remover__item__usuario__dia6").value;
     
+    if (itemRemovido === "") {
+        alert("Digite um item válido!");
+        return;
+    }
+
+    let itemEncontrado = false;
+    for (let categoria in listasCategoriasDia6) {
+        if (listasCategoriasDia6[categoria].includes(itemRemovido)) {
+            listasCategoriasDia6[categoria] = listasCategoriasDia6[categoria].filter(item => item !== itemRemovido);
+            itemEncontrado = true;
+        }
+    }
+
+    if (itemEncontrado) {
+        document.getElementById("item__removido__dia6").style.display = "block";
+        document.getElementById("item__adicionado__dia6").style.display = "none";
+        document.getElementById("lista__compras__container__dia6").style.display = "none";
+        document.getElementById("listaComprasDia6").style.display = "none";
+        document.getElementById("dia6PerguntaRemover").style.display = "none";
+        document.getElementById("dia6PrimeiraPergunta").style.display = "block";
+        document.getElementById("item__removido__dia6").textContent = `O item ${itemRemovido} foi removido da lista de compras.`;
+
+    } else {
+        alert(`O item ${itemRemovido} não foi encontrado na lista de compras.`);
+    }
+
+    atualizarListaDia6();
+};
+
+//adicionar item
+document.getElementById("btn__adicionar__dia6").onclick = function() {
+    if (document.getElementById("item__usuario__dia6").value === "") {
+        alert("Digite um item válido!");
+        return;
+    }
+    
+    let itemCompraDia6 = document.getElementById("item__usuario__dia6").value;
+    document.getElementById("item__removido__dia6").style.display = "none";
+    document.getElementById("dia6SegundaPergunta").style.display = "none";
+    document.getElementById("perguntaCategoriaDia6").style.display = "block";
+    document.getElementById("labelPerguntaCategoriaDia6").textContent = `Qual a categoria do item (${itemCompraDia6}) ?`;
+
+    document.querySelectorAll(".desafio__dia6__btn__categorias button").forEach(btn => {
+        btn.onclick = function () {
+            let categoria = btn.id;
+            if (categoria === "btnFrutasDia6") {
+                listasCategoriasDia6["frutas"].push(itemCompraDia6);
+            } else if (categoria === "btnDocesDia6") {
+                listasCategoriasDia6["doces"].push(itemCompraDia6);
+            } else if (categoria === "btnCongeladosDia6") {
+                listasCategoriasDia6["congelados"].push(itemCompraDia6);
+            } else {
+                listasCategoriasDia6["laticinios"].push(itemCompraDia6);
+            }
+
+            document.getElementById("perguntaCategoriaDia6").style.display = "none";
+            document.getElementById("dia6PrimeiraPergunta").style.display = "block";
+            document.getElementById("item__adicionado__dia6").textContent = `O item ${itemCompraDia6} foi adicionado a lista de compras.`;
+            document.getElementById("item__adicionado__dia6").style.display = "block";
+            
+            atualizarListaDia6();
+        };
+    });
+};
+
+function atualizarListaDia6() {
+    let listaHTML = `
+        <li><strong>Congelados:</strong><span class="item__da__lista"> ${listasCategoriasDia6.congelados.join(", ") || "Nenhum"}</span></li>
+        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategoriasDia6.doces.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Frutas:</strong><span class="item__da__lista"> ${listasCategoriasDia6.frutas.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategoriasDia6.laticinios.join(", ") || "Nenhum"}</span></li>
+    `;
+    document.getElementById("listaComprasDia6").innerHTML = listaHTML;
+}
+
+document.getElementById("btnAdicionarResetDia6").onclick = function () {
+    listasCategoriasDia6 = {
+        frutas: [],
+        doces: [],
+        congelados: [],
+        laticinios: []
+    };
+    atualizarListaDia6(); // Atualiza para lista vazia
+    document.getElementById("dia6PrimeiraPergunta").style.display = "block";
+    document.getElementById("lista__compras__container__dia6").style.display = "none";
+    document.getElementById("listaComprasDia6").style.display = "none";
+    document.getElementById("btnAdicionarResetDia6").style.display = "none";
+    document.getElementById("dia6PerguntaRemover").style.display = "none";
+    document.getElementById("item__removido__dia6").style.display = "none";
+};
+
+
 
 

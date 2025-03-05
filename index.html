@@ -21,6 +21,7 @@
 
     <main class="main__content">
 
+<!--codigo dia 1-->
         <section class="desafio__container">
             <div class="desafio__dia1">
                 <h1 class="desafio__tema"> #Day1: <span>Operações Booleanas</span></h1>
@@ -88,6 +89,7 @@
             </div>
         </section>
 
+<!--codigo dia 2-->
         <section class="desafio__container">
             <div class="desafio__dia2">
                 <h1 class="desafio__tema"> #Day2: <span>Variáveis</span></h1>
@@ -131,6 +133,7 @@
 
         </section>
 
+<!--codigo dia 3-->
         <section class="desafio__container">
             <div class="desafio__dia3">
                 <h1 class="desafio__tema"> #Day3: <span>Fluxo de decisão</span></h1>
@@ -207,6 +210,7 @@
 
         </section>
 
+<!--codigo dia 4-->
         <section class="desafio__container">
             <div class="desafio__dia4">
                 <h1 class="desafio__tema"> #Day4: <span>Adivinhe o número</span></h1>
@@ -229,6 +233,7 @@
             <button type="submit" id="btnAdivinharReset" class="btn__reset" style="display: none;">Resetar</button>
         </section>
 
+<!--cogido dia 5-->
         <section class="desafio__container">
             <div class="desafio__dia5">
                 <h1 class="desafio__tema"> #Day5: <span>Arrays e coleções</span></h1>
@@ -253,38 +258,97 @@
 
             <div class="desafio__dia5__codigo" id="dia5SegundaPergunta" style="display: none;">
                 <div id="item__input"> </div>
-                <label for="">Digite o alimento:</label>
-                <input class="desafio__dia2__input" type="text" id="item__usuario" placeholder="Digite um alimento"
-                    required> <br>
-                <br>
-                <button type="submit" id="btn__adicionar" class="btn__default">Adicionar
-                </button>
-            </div>
+                    <label for="">Digite o alimento:</label>
+                    <input class="desafio__dia2__input" type="text" id="item__usuario" placeholder="Digite um alimento"
+                        required> <br> <br>
+                    <button type="submit" id="btn__adicionar" class="btn__default">Adicionar
+                    </button>
+                </div>
             </div>
 
             <div class="desafio__dia5__codigo">
                 <div id="perguntaCategoria" style="display: none;">
-                <label id="labelPerguntaCategoria"></label>
-                <div class="desafio__dia5__btn__categorias">
-                    <button type="submit" id="btnFrutas" class="btn__default">Frutas</button>
-                    <button type="submit" id="btnLaticinios" class="btn__default">Laticínios</button>
-                    <button type="submit" id="btnCongelados" class="btn__default">Congelados</button>
-                    <button type="submit" id="btnDoces" class="btn__default">Doces</button>
+                    <label id="labelPerguntaCategoria"></label>
+                    <div class="desafio__dia5__btn__categorias">
+                        <button type="submit" id="btnFrutas" class="btn__default">Frutas</button>
+                        <button type="submit" id="btnLaticinios" class="btn__default">Laticínios</button>
+                        <button type="submit" id="btnCongelados" class="btn__default">Congelados</button>
+                        <button type="submit" id="btnDoces" class="btn__default">Doces</button>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <p id="lista__compras__container" style="display: none;" class="lista__compras__titulo">Sua lista de compras atualizada:</p>
             <ul id="listaCompras" class="lista__compras__itens" aria-live="polite" role="list">
-
             </ul>
-
             <button type="submit" id="btnAdicionarReset" class="btn__reset" style="display: none;">Resetar</button>
-
             </div>
 
         </section>
 
+ <!--codigo dia 6-->
+        <section class="desafio__container">
+            <div class="desafio__dia6">
+                <h1 class="desafio__tema"> #Day6: <span>Remoção de Arrays</span></h1>
+                <p class="desafio__descricao">Seguindo o programa criado do desafio anterior, agora o desafio é adicionar um programa que mostra ao usuário a lista de compras e possibilite ele de remover um item, caso deseje.
+                    a lista organizada por categorias.
+            </div>
+
+            <hr>
+
+            <div class="desafio__dia6__codigo" id="dia6PrimeiraPergunta">
+                <label for="">Deseja adicionar um alimento a lista de compras?</label>
+                <div class="desafio__dia6__btn__area">
+                    <button type="submit" id="btnSimDia6" class="btn__default">Sim</button>
+                    <button type="submit" id="btnNaoDia6" class="btn__default">Não</button>
+                </div> 
+                <p class="item__adicionado" id="item__adicionado__dia6"></p>
+                <p class="item__removido" id="item__removido__dia6"></p>
+                <br>
+                <hr>
+                <button type="submit" class="btn__default" id="btnRemoverItem">Quero remover um item da lista</button>
+
+            </div>
+
+            <div class="desafio__dia6__codigo" id="dia6SegundaPergunta" style="display: none;">
+                <div id="item__input__dia6"> </div>
+                    <label for="">Digite o alimento:</label>
+                    <input class="desafio__dia2__input" type="text" id="item__usuario__dia6" placeholder="Digite um alimento"
+                        required> <br> <br>
+                    <button type="submit" id="btn__adicionar__dia6" class="btn__default">Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <div class="desafio__dia6__codigo">
+                <div id="perguntaCategoriaDia6" style="display: none;">
+                    <label id="labelPerguntaCategoriaDia6"></label>
+                    <div class="desafio__dia6__btn__categorias">
+                        <button type="submit" id="btnFrutasDia6" class="btn__default">Frutas</button>
+                        <button type="submit" id="btnLaticiniosDia6" class="btn__default">Laticínios</button>
+                        <button type="submit" id="btnCongeladosDia6" class="btn__default">Congelados</button>
+                        <button type="submit" id="btnDocesDia6" class="btn__default">Doces</button>
+                    </div>
+                </div>
+            </div>
+
+            <p id="lista__compras__container__dia6" style="display: none;" class="lista__compras__titulo">Sua lista de compras atualizada:</p>
+            <ul id="listaComprasDia6" class="lista__compras__itens" aria-live="polite" role="list">
+            </ul>
+            <button type="submit" id="btnAdicionarResetDia6" class="btn__reset" style="display: none;">Resetar</button>
+            </div>
+
+            <div class="desafio__dia6__codigo" id="dia6PerguntaRemover" style="display: none;">
+                <div id="item__input__dia6"> </div>
+                    <label for="">Qual item gostaria de remover?</label>
+                    <input class="desafio__dia2__input" type="text" id="remover__item__usuario__dia6" placeholder="Digite um alimento"
+                        required> <br> <br>
+                    <button type="submit" id="btnRemover" class="btn__default">Remover
+                    </button>
+                </div>
+            </div>
+
+        </section>
 
         <script src="script.js"></script>
 

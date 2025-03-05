@@ -100,7 +100,8 @@ label{
 .desafio__dia2,
 .desafio__dia3,
 .desafio__dia4, 
-.desafio__dia5 {
+.desafio__dia5,
+.desafio__dia6 {
     display: flex;
     flex-direction: column;
     font-family: var(--font-secundaria);
@@ -155,7 +156,8 @@ hr {
 .desafio__dia1__codigo,
 .desafio__dia3__codigo,
 .desafio__dia4__codigo,
-.desafio__dia5__codigo {
+.desafio__dia5__codigo,
+.desafio__dia6__codigo {
     display: flex;
     flex-direction: column;
     font-size: 2em;
@@ -175,6 +177,7 @@ hr {
 
 .desafio__dia3__btn__area,
 .desafio__dia5__btn__area,
+.desafio__dia6__btn__area,
 .desafio__dia5__btn__categorias,
 .desafio__dia3__btn__frontend,
 .desafio__dia3__btn__backend,
@@ -284,6 +287,15 @@ hr {
     text-align: center;
     font-size: 0.8em;
     color: var(--cor-principal);
+    font-family: var(--font-secundaria);
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.item__removido{
+    text-align: center;
+    font-size: 0.8em;
+    color: red;
     font-family: var(--font-secundaria);
     font-weight: 200;
     margin-top: 15px;
@@ -403,6 +415,7 @@ hr {
         border-radius: 20px;
     }
     .desafio__dia5__btn__area,
+    .desafio__dia6__btn__area
     .desafio__dia3__btn__area,
     .desafio__dia3__btn__frontend,
     .desafio__dia3__btn__backend,
