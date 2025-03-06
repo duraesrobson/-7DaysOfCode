@@ -465,7 +465,7 @@ document.getElementById("btnNovoCalculo").onclick = function() {
 document.getElementById("btnSair").onclick = function() {
     document.getElementById("dia7Resultado").style.display = "none";
     document.getElementById("dia7Calculo").style.display = "none";
-        document.getElementById("sairCalculo").textContent = "Obrigado por usar a calculadora, até a próxima!";
+        document.getElementById("sairCalculo").textContent = "Obrigado por testar a calculadora, até a próxima!";
 }
 
 
