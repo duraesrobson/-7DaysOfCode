@@ -386,6 +386,90 @@ document.getElementById("btnAdicionarResetDia6").onclick = function () {
     document.getElementById("item__removido__dia6").style.display = "none";
 };
 
+//Código do #Day7
+function somar(valor1, valor2) {
+    return valor1 + valor2;
+}
+
+function subtrair(valor1, valor2) {
+    return valor1 - valor2;
+}
+
+function multiplicar(valor1, valor2) {
+    return valor1 * valor2;
+}
+
+function dividir(valor1, valor2) {
+    return valor1 / valor2;
+}
+
+let valor1;
+let valor2;
+let resultado;
+let soma = false
+let subtracao = false;
+let multiplicacao = false;
+let divisao = false;
+
+document.querySelectorAll(".desafio__dia7__btn__area button, .desafio__dia7__codigo button").forEach(btn => {
+    btn.addEventListener("click", function (event) {
+
+        document.getElementById("dia7Escolha").style.display = "none";
+        document.getElementById("dia7Calculo").style.display = "block";
+
+        if (event.target.id === "btnSomar") {
+            soma = true;    
+        } else if (event.target.id === "btnSubtrair") {
+            subtracao = true;
+        } else if (event.target.id === "btnMultiplicar") {
+            multiplicacao = true
+        } else {
+            divisao = true;
+        }
+    });
+});
+
+document.getElementById("btnCalcular").onclick = function() {
+
+        valor1 = parseFloat(document.getElementById("usuarioValor1").value);
+        valor2 = parseFloat(document.getElementById("usuarioValor2").value);
+        if (soma === true) {
+            resultado = somar(valor1, valor2);
+        } else if (subtracao === true) {
+            resultado = subtrair(valor1, valor2);
+        } else if (multiplicacao === true) {
+            resultado = multiplicar(valor1, valor2);
+        } else {
+            resultado = dividir(valor1, valor2);
+        }
+
+        document.getElementById("dia7Calculo").style.display = "none";
+        document.getElementById("dia7Resultado").style.display = "block";
+        document.getElementById("resultadoCalculo").textContent = `O resultado é: ${resultado}`;
+
+}
+
+document.getElementById("btnNovoCalculo").onclick = function() {
+    soma = false;
+    subtracao = false;
+    multiplicacao = false;
+    divisao = false;
+    document.getElementById("dia7Calculo").style.display = "none";
+        document.getElementById("dia7Escolha").style.display = "block";
+        document.getElementById("dia7Resultado").style.display = "none";
+        document.getElementById("usuarioValor1").value = "";
+        document.getElementById("usuarioValor2").value = "";
+        document.getElementById("resultadoCalculo").textContent = "";
+}
+
+document.getElementById("btnSair").onclick = function() {
+    document.getElementById("dia7Resultado").style.display = "none";
+    document.getElementById("dia7Calculo").style.display = "none";
+        document.getElementById("sairCalculo").textContent = "Obrigado por usar a calculadora, até a próxima!";
+}
+
+
+
 
 
 

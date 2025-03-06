@@ -157,7 +157,8 @@ hr {
 .desafio__dia3__codigo,
 .desafio__dia4__codigo,
 .desafio__dia5__codigo,
-.desafio__dia6__codigo {
+.desafio__dia6__codigo,
+.desafio__dia7__codigo {
     display: flex;
     flex-direction: column;
     font-size: 2em;
@@ -178,6 +179,7 @@ hr {
 .desafio__dia3__btn__area,
 .desafio__dia5__btn__area,
 .desafio__dia6__btn__area,
+.desafio__dia7__btn__area,
 .desafio__dia5__btn__categorias,
 .desafio__dia3__btn__frontend,
 .desafio__dia3__btn__backend,
@@ -308,6 +310,12 @@ hr {
         font-family: var(--font-secundaria);
         font-weight: 200;
     
+}
+
+.texto__sair__calculadora {
+    margin: 20px;
+    font-size: 1.8em;
+    color: var(--cor-principal);
 }
 
 .footer {

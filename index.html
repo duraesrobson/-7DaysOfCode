@@ -286,12 +286,12 @@
 
         </section>
 
- <!--codigo dia 6-->
+ 
+<!--codigo dia 6-->
         <section class="desafio__container">
             <div class="desafio__dia6">
                 <h1 class="desafio__tema"> #Day6: <span>Remoção de Arrays</span></h1>
                 <p class="desafio__descricao">Seguindo o programa criado do desafio anterior, agora o desafio é adicionar um programa que mostra ao usuário a lista de compras e possibilite ele de remover um item, caso deseje.
-                    a lista organizada por categorias.
             </div>
 
             <hr>
@@ -347,6 +347,63 @@
                     </button>
                 </div>
             </div>
+
+        </section>
+
+<!--codigo dia 7-->
+        <section class="desafio__container">
+            <div class="desafio__dia6">
+                <h1 class="desafio__tema"> #Day7: <span>Funções em Javascript</span></h1>
+                <p class="desafio__descricao">O desafio propõe a criação de uma calculadora simples, mas com um detalhe importante: cada operação deve ser uma função separada dentro do código.
+                    <br> <br>
+                    Primeiro, o programa precisa exibir as opções disponíveis: soma, subtração, multiplicação, divisão e a opção de sair.
+                    <br> <br>
+                    Depois, a pessoa escolhe a operação desejada e informa dois números. O programa faz o cálculo e mostra o resultado na tela.
+                    <br> <br>
+                    Se a opção escolhida for "sair", o programa encerra a execução e exibe a mensagem: "Até a próxima".
+            </div>
+
+            <hr>
+
+            <div class="desafio__dia7__codigo" id="dia7Escolha">
+                <label for="">Selecione a função do seu cálculo</label>
+                <div class="desafio__dia7__btn__area">
+                    <button type="submit" id="btnSomar" class="btn__default">Somar</button>
+                    <button type="submit" id="btnSubtrair" class="btn__default">Subtrair</button>
+                    <button type="submit" id="btnMultiplicar" class="btn__default">Multiplicar</button>
+                    <button type="submit" id="btnDividir" class="btn__default">Dividir</button>
+                </div> 
+                <p class="item__adicionado" id="item__adicionado__dia6"></p>
+                <p class="item__removido" id="item__removido__dia6"></p>
+                <br>
+                
+            </div>
+
+            <div class="desafio__dia7__codigo" id="dia7Calculo" style="display: none;">
+                    <label for="">Digite o primeiro valor:</label>
+                    <input class="desafio__dia2__input" id="usuarioValor1" placeholder="Digite um número"
+                        required>
+                    <label for="">Digite o segundo valor:</label>
+                    <input class="desafio__dia2__input" id="usuarioValor2" placeholder="Digite um número"
+                        required> <br> <br>
+                    <button type="submit" id="btnCalcular" class="btn__default">Calcular
+                    </button>
+               
+            </div>
+
+            <div class="desafio__dia7__codigo" id="dia7Resultado" style="display: none;">
+                <h2 id="resultadoCalculo"></h2>
+
+                <label for="">Quer fazer outro cálculo?</label>
+                <div class="desafio__dia7__btn__area">
+                <button type="submit" id="btnNovoCalculo" class="btn__default">Sim</button>
+                <button type="submit" id="btnSair" class="btn__default">Sair</button>
+            </div>
+            </div>
+
+            <h2 id="sairCalculo" class="texto__sair__calculadora"></h2>
+
+        </div>
 
         </section>
 
