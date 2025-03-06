@@ -139,7 +139,7 @@ function atualizarListaDia6Tecnologias() {
 //Código do #Day4
 let chute;
 let tentativas = 0;
-const numeroCerto = Math.floor(Math.random() *10+1);
+let numeroCerto = Math.floor(Math.random() *10+1);
 
 document.getElementById("btnAdivinhar").onclick = function() {
     chute = document.getElementById("chuteUsuario").value;
@@ -147,7 +147,7 @@ document.getElementById("btnAdivinhar").onclick = function() {
 
     if (chute == numeroCerto) {
         document.getElementById("desafio__dia4__resposta").style.color = "#145bd5";
-        document.getElementById("desafio__dia4__resposta").textContent = "Parabéns, você acertou o número!";
+        document.getElementById("desafio__dia4__resposta").textContent = `Parabéns, você acertou o número! O número era ${numeroCerto}.`;
         document.getElementById("btnAdivinhar").disabled = true;
         document.getElementById("btnAdivinharReset").style.display = "block";
     } else if (tentativas < 3) {
@@ -160,9 +160,14 @@ document.getElementById("btnAdivinhar").onclick = function() {
         document.getElementById("btnAdivinharReset").style.display = "block";
     }
 
-    document.getElementById("chuteUsuario").value = ""
+    document.getElementById("chuteUsuario").value = "";
+
     document.getElementById("btnAdivinharReset").onclick = function () {
-    location.reload();
+        document.getElementById("btnAdivinharReset").style.display = "none";
+        document.getElementById("desafio__dia4__resposta").textContent = "";
+        document.getElementById("btnAdivinhar").disabled = false;
+        numeroCerto = Math.floor(Math.random() *10+1);
+        tentativas = 0;
 
     }
 
@@ -230,12 +235,13 @@ document.getElementById("btn__adicionar").onclick = function() {
     });
 };
 
+//todo: corrigir adicionar a lista
 function atualizarLista() {
     let listaHTML = `
         <li><strong>Congelados:</strong><span class="item__da__lista"> ${listasCategorias.congelados.join(", ") || "Nenhum"}</span></li>
-        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategorias.doces.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategorias.laticinios.join(", ") || "Nenhum"} </span></li>
         <li><strong>Frutas:</strong><span class="item__da__lista"> ${listasCategorias.frutas.join(", ") || "Nenhum"} </span></li>
-        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategorias.laticinios.join(", ") || "Nenhum"}</span></li>
+        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategorias.doces.join(", ") || "Nenhum"}</span></li>
     `;
     document.getElementById("listaCompras").innerHTML = listaHTML;
 }
