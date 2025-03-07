@@ -201,13 +201,20 @@ document.querySelectorAll(".desafio__dia5__btn__area button").forEach(btn => {
 });
 
 document.getElementById("btn__adicionar").onclick = function() {
+    let itemCompra = document.getElementById("item__usuario").value;
 
-    if (document.getElementById("item__usuario").value === "") {
+    if (itemCompra === "") {
         alert("Digite um item válido!");
         return;
     }
     
-    let itemCompra = document.getElementById("item__usuario").value;
+    for (let categoria in listasCategorias) {
+        if (listasCategorias[categoria].includes(itemCompra)) {
+            alert("Esse item já está na lista!");
+            return;
+        }
+    }
+
     document.getElementById("dia5SegundaPergunta").style.display = "none";
     document.getElementById("perguntaCategoria").style.display = "block";
     document.getElementById("labelPerguntaCategoria").textContent = `Qual a categoria do item (${itemCompra}) ?`
@@ -227,6 +234,7 @@ document.getElementById("btn__adicionar").onclick = function() {
 
             document.getElementById("perguntaCategoria").style.display = "none";
             document.getElementById("dia5PrimeiraPergunta").style.display = "block";
+            document.getElementById("item__adicionado").style.display = "block";
             document.getElementById("item__adicionado").textContent = `O item ${itemCompra} foi adicionado a lista de compras.`
             
             atualizarLista();
@@ -235,7 +243,6 @@ document.getElementById("btn__adicionar").onclick = function() {
     });
 };
 
-//todo: corrigir adicionar a lista
 function atualizarLista() {
     let listaHTML = `
         <li><strong>Congelados:</strong><span class="item__da__lista"> ${listasCategorias.congelados.join(", ") || "Nenhum"}</span></li>
@@ -332,12 +339,20 @@ document.getElementById("btnRemover").onclick = function() {
 
 //adicionar item
 document.getElementById("btn__adicionar__dia6").onclick = function() {
-    if (document.getElementById("item__usuario__dia6").value === "") {
+    let itemCompraDia6 = document.getElementById("item__usuario__dia6").value;
+
+    if (itemCompraDia6 === "") {
         alert("Digite um item válido!");
         return;
     }
     
-    let itemCompraDia6 = document.getElementById("item__usuario__dia6").value;
+    for (let categoria in listasCategorias) {
+        if (listasCategoriasDia6[categoria].includes(itemCompraDia6)) {
+            alert("Esse item já está na lista!");
+            return;
+        }
+    }
+    
     document.getElementById("item__removido__dia6").style.display = "none";
     document.getElementById("dia6SegundaPergunta").style.display = "none";
     document.getElementById("perguntaCategoriaDia6").style.display = "block";
@@ -369,9 +384,9 @@ document.getElementById("btn__adicionar__dia6").onclick = function() {
 function atualizarListaDia6() {
     let listaHTML = `
         <li><strong>Congelados:</strong><span class="item__da__lista"> ${listasCategoriasDia6.congelados.join(", ") || "Nenhum"}</span></li>
-        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategoriasDia6.doces.join(", ") || "Nenhum"} </span></li>
+        <li><strong>Laticínios:</strong><span class="item__da__lista"> ${listasCategoriasDia6.laticinios.join(", ") || "Nenhum"} </span></li>
         <li><strong>Frutas:</strong><span class="item__da__lista"> ${listasCategoriasDia6.frutas.join(", ") || "Nenhum"} </span></li>
-        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategoriasDia6.laticinios.join(", ") || "Nenhum"}</span></li>
+        <li><strong>Doces:</strong><span class="item__da__lista"> ${listasCategoriasDia6.doces.join(", ") || "Nenhum"}</span></li>
     `;
     document.getElementById("listaComprasDia6").innerHTML = listaHTML;
 }
