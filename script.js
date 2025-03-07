@@ -143,6 +143,13 @@ let numeroCerto = Math.floor(Math.random() *10+1);
 
 document.getElementById("btnAdivinhar").onclick = function() {
     chute = document.getElementById("chuteUsuario").value;
+
+    if (chute === "" || isNaN(chute)) {
+        alert("Digite um número válido!");
+        return;
+        
+    }
+
     tentativas++;
 
     if (chute == numeroCerto) {
@@ -150,9 +157,12 @@ document.getElementById("btnAdivinhar").onclick = function() {
         document.getElementById("desafio__dia4__resposta").textContent = `Parabéns, você acertou o número! O número era ${numeroCerto}.`;
         document.getElementById("btnAdivinhar").disabled = true;
         document.getElementById("btnAdivinharReset").style.display = "block";
-    } else if (tentativas < 3) {
+    } else if (tentativas === 1) {
         document.getElementById("desafio__dia4__resposta").style.color = "red";
-        document.getElementById("desafio__dia4__resposta").textContent = "Tente novamente, você vai conseguir!";
+        document.getElementById("desafio__dia4__resposta").textContent = "Tente outro número!";
+    } else if (tentativas === 2) {
+        document.getElementById("desafio__dia4__resposta").style.color = "red";
+        document.getElementById("desafio__dia4__resposta").textContent = "Quase lá, última tentativa!";    
     } else {
         document.getElementById("desafio__dia4__resposta").style.color = "red";
         document.getElementById("desafio__dia4__resposta").textContent = `Poxa, não foi dessa vez. O número era ${numeroCerto}.`
