@@ -305,13 +305,19 @@ document.querySelectorAll(".desafio__dia6__btn__area button").forEach(btn => {
 });
 
     document.getElementById("btnRemoverItem").onclick = function(){
+        atualizarListaDia6();
+
+        if (Object.values(listasCategoriasDia6).every(categoria => categoria.length === 0)) {
+            alert("A lista de compras está vazia!");
+            return;
+        }
         
-    document.getElementById("dia6PerguntaRemover").style.display = "block";
-    document.getElementById("dia6PrimeiraPergunta").style.display = "none";
-    document.getElementById("lista__compras__container__dia6").style.display = "block";
-    document.getElementById("listaComprasDia6").style.display = "block"; 
-    document.getElementById("btnAdicionarResetDia6").style.display = "block";
-}
+        document.getElementById("dia6PerguntaRemover").style.display = "block";
+        document.getElementById("dia6PrimeiraPergunta").style.display = "none";
+        document.getElementById("lista__compras__container__dia6").style.display = "block";
+        document.getElementById("listaComprasDia6").style.display = "block"; 
+        document.getElementById("btnAdicionarResetDia6").style.display = "block";
+    }
 
 //remover item
 document.getElementById("btnRemover").onclick = function() {
@@ -325,7 +331,7 @@ document.getElementById("btnRemover").onclick = function() {
 
     let itemEncontrado = false;
     for (let categoria in listasCategoriasDia6) {
-        if (listasCategoriasDia6[categoria].includes(itemRemovido)) {
+            if (listasCategoriasDia6[categoria].includes(itemRemovido)) {
             listasCategoriasDia6[categoria] = listasCategoriasDia6[categoria].filter(item => item !== itemRemovido);
             itemEncontrado = true;
         }
