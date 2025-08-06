@@ -1,6 +1,7 @@
 # #7DaysOfCode - Desafios Práticos
 
 Este repositório contém um site interativo que apresenta os desafios do projeto #7DaysOfCode da Alura. A cada dia, um novo desafio em JavaScript é adicionado, acompanhado de uma interface estilizada em HTML e CSS para melhor visualização e compreensão do código na prática.
+Acesse o link e veja as implementações: https://7-days-of-code-pi.vercel.app
 
 ## 📌 Sobre o Projeto
 
